@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+CrashAutoSave*.toe
+*.dmp
+# Backup
+Dependencies/Outputs/Logger/Logfiles/logs*
+*.mov
+*.mp4
+*.aep
+*.gdoc
