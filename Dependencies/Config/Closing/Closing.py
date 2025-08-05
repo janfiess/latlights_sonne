@@ -9,7 +9,7 @@ class Closing:
 	
 	# executed in op("execute_save_tox")
 	def SaveAllTox(self):
-		op.Logger.Debug("Closing -- Save all .tox")
+		# op.Logger.Debug("Closing -- Save all .tox")
 		# Clear all project paths
 		project.paths.clear()
 		try:
@@ -28,11 +28,11 @@ class Closing:
 					debug("Saving tox:", ext_op.name)
 		
 	def ShutDownPC(self):
-		op.Logger.Info("[Closing]: Force shutdown PC in 10s")
+		#op.Logger.Info("[Closing]: Force shutdown PC in 10s")
 		os.system('shutdown -s -t 10')
 		
 	def Stop_ShutDownPC(self):
-		op.Logger.Info("[Closing]: Stop shutdown")
+		#op.Logger.Info("[Closing]: Stop shutdown")
 		os.system('shutdown -a')
 		
 	# executed in op("execute_save_tox")

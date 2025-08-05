@@ -9,8 +9,6 @@ class Oscin:
 		return
 		
 	def Triggeraction(self, key, value):
-		parent().par.Prevosckey = parent().par.Latestosckey
-		parent().par.Latestosckey = key
 
 		# FLASH COLLECTIVE: Video wird über alle Tetraeder abgespielt, aber nur, wenn individual mode eingestellt ist.
 		
@@ -19,28 +17,10 @@ class Oscin:
 
 		elif key == "/Tetraeder/ramp/right":
 			op.ScenePlayer.Anim_collective_ramp("right")
-			
-
-		elif key == "/Tetraeder/All":
-			if int(value) == 1:
-				op.Clipgun_flash_collective_tetraeder.Play(3, "synchronous") # 3 -> white, "synchronous" -> next start pos: alle synchron
-			
-			if int(value) == 0:
-				return
-
-		# Message kommt von Max (Audio), zuvor hat Max ein Signal vom Buzzer erhalten
-		# FLASH INDIVIDUAL: einzelne Tetraeder erleuchten
-
-		elif key == "/Tetraeder/Index/Red":
-			op.Clipgun_flash_individual.Play(0, value)    # 0 -> red,  value ist id (0-7) des Tetraeders
-		elif key == "/Tetraeder/Index/Blue":
-			op.Clipgun_flash_individual.Play(2, value)    # 2 -> blue,  value ist id (0-7) des Tetraeders
-
-		
 
 		# Base Anim
 		elif key == "/Tetraeder/Baseanim":
-			op.Clipgun_base.Play(value)  # value ist video ID
+			op.Clipgun_base.op("clips/video11").par.Trigger.pulse()
 		
 	def OnParamChanged(self, par):
 		if par.name == "Active":

@@ -6,7 +6,7 @@ class Buttonbase:
 		return
 
 	def Play(self):
-		print("button base")
+		# print("button base")
 		moviefile = op.Clipgun_base.op("moviefilein_rgb")
 		op.Clipgun_base.par.Latestkeypressed = parent().name
 		

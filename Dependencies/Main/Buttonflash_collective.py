@@ -32,7 +32,7 @@ class Buttonflash:
 
 	
 	def startVideo(self, moviefile):
-		print(f"moviefile: {moviefile}")
+		#print(f"moviefile: {moviefile}")
 		moviefile.par.cuepoint = 0
 		moviefile.par.cuepulse.pulse()
 		moviefile.par.play = 1
