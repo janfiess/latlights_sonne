@@ -4,7 +4,7 @@ CrashAutoSave*.toe
 *.dmp
 # Backup
 Dependencies/Outputs/Logger/Logfiles/logs*
-*.mov
-*.mp4
+# *.mov
+# *.mp4
 *.aep
 *.gdoc
