@@ -21,18 +21,18 @@ class Buttonflash:
 
 		# print("tetraeder not muted")
 	
-		moviefile_cwww_zone0 = op.Clipgun_flash.op(f"moviefilein_zone0_cwww_{int(next_player_id)}")
-		# print(f"moviefile_cwww_zone0: {moviefile_cwww_zone0}")
-		self.startVideo(moviefile_cwww_zone0)
+		moviefile_cwww = op.Clipgun_flash.op(f"moviefilein_cwww_{int(next_player_id)}")
+		# print(f"Clipgun_flash: {moviefile_cwww}")
+		self.startVideo(moviefile_cwww)
 			
-		moviefile_rgb_zone0 = op.Clipgun_flash.op(f"moviefilein_zone0_rgb_{int(next_player_id)}")
-		# print(f"moviefile_rgb_zone0: {moviefile_rgb_zone0}")
-		self.startVideo(moviefile_rgb_zone0)
+		moviefile_rgb = op.Clipgun_flash.op(f"moviefilein_rgb_{int(next_player_id)}")
+		# print(f"Clipgun_flash: {moviefile_rgb}")
+		self.startVideo(moviefile_rgb)
 
 
 	
 	def startVideo(self, moviefile):
-		#print(f"moviefile: {moviefile}")
+		# print(f"moviefile: {moviefile}")
 		moviefile.par.cuepoint = 0
 		moviefile.par.cuepulse.pulse()
 		moviefile.par.play = 1
